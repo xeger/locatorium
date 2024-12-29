@@ -9,7 +9,6 @@ export default defineProject
     setupFiles: ['./vitest-setup.ts', 'vitest-browser-react'],
     browser: {
       enabled: true,
-      instances: [{ browser: 'chrome' }],
     },
   }
 })
