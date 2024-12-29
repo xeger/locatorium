@@ -1,6 +1,8 @@
 import React from 'react'
 import * as ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import './index.css'
 import { HomePage } from './routes'
 import { Root } from './routes/__root'
 import { ChainingPage } from './routes/chaining'
