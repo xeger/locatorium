@@ -5,6 +5,10 @@ import { defineConfig } from 'vite';
 import istanbul from 'vite-plugin-istanbul';
 
 export default defineConfig({
+  build: {
+    // TODO: experiment with coverage, especially v8 (but only if it works with playwright!)
+    sourcemap: 'hidden',
+  },
   plugins: [
     react(),
     istanbul({
