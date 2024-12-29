@@ -23,6 +23,7 @@ export default defineConfig({
     },
   },
   test: {
+    include: ['src/**/*.test.{ts,tsx}'],
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./vitest-setup.ts', 'vitest-browser-react'],
@@ -30,7 +31,7 @@ export default defineConfig({
       provider: 'istanbul',
       reporter: ['text', 'json', 'html'],
       include: ['src/**/*.{ts,tsx}'],
-      exclude: ['src/**/*.test.{ts,tsx}', 'src/**/*.spec.{ts,tsx}'],
+      exclude: ['src/**/*.test.{ts,tsx}'],
     },
     browser: {
       enabled: true,
