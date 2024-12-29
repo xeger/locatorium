@@ -31,16 +31,16 @@ The table below outlines the locator methods available in Vitest, which closely 
 
 Excerpted from the [official documentation](https://main.vitest.dev/guide/browser/locators.html#locators-2-1-0).
 
-|           Method | Discriminator | Modifiers       | Notes                              |
-|-----------------:|---------------|-----------------|------------------------------------|
-|        getByRole | name[^1]      | exact, ARIA[^2] | Role may implicit[^3] or explicit. |
-|     getByAltText |               | exact           |                                    |
-|   getByLabelText |               | exact           |                                    |
-| getByPlaceholder |               | exact           |                                    |
-|        getByText |               | exact           |                                    |
-|       getByTitle |               | exact           |                                    |
-|      getByTestId |               | exact           |                                    |
+|           Method | Discriminator | Modifiers       | Notes                          |
+|-----------------:|---------------|-----------------|--------------------------------|
+|        getByRole | name[^1]      | exact, ARIA[^2] | Implicit[^3] or explicit role. |
+|     getByAltText |               | exact           |                                |
+|   getByLabelText |               | exact           |                                |
+| getByPlaceholder |               | exact           |                                |
+|        getByText |               | exact           |                                |
+|       getByTitle |               | exact           |                                |
+|      getByTestId |               | exact           |                                |
 
-[^1]: [Accessible name](https://developer.mozilla.org/en-US/docs/Glossary/Accessible_name)
-[^2]: [ARIA state attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes)
-[^3]: DOM elements may be tagged with `aria-role` or they may have an [implicit role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) e.g. every `button` has role `button` unless otherwise specified
+[^1]: [Accessible name](https://developer.mozilla.org/en-US/docs/Glossary/Accessible_name) as defined by ARIA.
+[^2]: [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes) that define the user-interface state of an element.
+[^3]: DOM elements may be tagged with `aria-role` or they may have an [implicit role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles) e.g. every `button` has role `button` unless otherwise specified.
