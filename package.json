@@ -8,11 +8,14 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest run --coverage",
+    "test": "vitest run",
     "test:ui": "vitest --browser.headless=false",
-    "test:watch": "vitest",
-    "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:playwright": "vitest run --config vitest-playwright.config.ts",
+    "test:playwright:ui": "vitest --config vitest-playwright.config.ts --browser.headless=false",
+    "test:webdriverio": "vitest run --config vitest-webdriverio.config.ts",
+    "test:webdriverio:ui": "vitest --config vitest-webdriverio.config.ts --browser.headless=false",
+    "test-e2e": "playwright test",
+    "test-e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "react": "^18.3.1",
