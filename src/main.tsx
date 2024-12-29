@@ -1,9 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import * as ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { HomePage } from './routes'
 import { Root } from './routes/__root'
-import { AboutPage } from './routes/about'
+import { ChainingPage } from './routes/chaining'
 
 const router = createBrowserRouter([
   {
@@ -15,8 +15,8 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'about',
-        element: <AboutPage />,
+        path: 'chaining',
+        element: <ChainingPage />,
       },
     ],
   },
