@@ -25,7 +25,6 @@ export default defineConfig({
   test: {
     include: ['src/**/*.test.{ts,tsx}'],
     globals: true,
-    environment: 'jsdom',
     setupFiles: ['./vitest-setup.ts', 'vitest-browser-react'],
     coverage: {
       provider: 'istanbul',
