@@ -27,7 +27,7 @@ TODO
 
 While Vitest implements the core Playwright locator APIs, there are some subtle differences between the implementations; for example, Vitest's `getByTitle` cannot find `title` elements within SVGs, unlike Playwright's version.
 
-The table below outlines the locator methods available in Vitest, which closely approximate Playwright's capabilities while maintaining Vitest's ability to run with multiple browsers, automation providers, and out-of-browser execution.
+The table below outlines the locator methods available in Vitest, which closely approximate Playwright's capabilities while maintaining Vitest's ability to run with multiple browsers and automation providers.
 
 Excerpted from the [official documentation](https://main.vitest.dev/guide/browser/locators.html#locators-2-1-0).
 
