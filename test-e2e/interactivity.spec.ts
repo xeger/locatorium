@@ -6,6 +6,15 @@ beforeEach(async ({ page }) => {
   await page.goto('/interactivity');
 });
 
+test('click', async ({ page }) => {
+  const target = page.getByTestId('click-target');
+    const telltale = page.getByTestId('last-clicked');
+  await expect(target).toBeVisible();
+  await expect(telltale).toHaveText('(none)')
+  await target.click();
+  await expect(telltale).toHaveText('Alpha')
+})
+
 test('right click', async ({ page }) => {
   const target = page.getByTestId('right-click-target');
   await expect(target).toBeVisible();
