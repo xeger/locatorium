@@ -1,12 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 export function ChainingPage() {
   const [last, setLast] = useState('(none)')
-  const chooseLast = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const chooseLast = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     setLast(e.currentTarget.textContent ?? '')
-  }
+  }, [setLast])
 
   return (
     <div className="flex flex-col gap-4 items-center justify-center min-h-screen">
