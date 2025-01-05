@@ -14,7 +14,8 @@
     "test:webdriverio": "vitest run --config vitest-webdriverio.config.ts",
     "test:webdriverio:ui": "vitest --config vitest-webdriverio.config.ts --browser.headless=false",
     "test-e2e": "playwright test",
-    "test-e2e:ui": "playwright test --ui"
+    "test-e2e:ui": "playwright test --ui",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@radix-ui/react-context-menu": "^2.2.4",

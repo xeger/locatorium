@@ -6,5 +6,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function toTitleCase (str: string) {
-  return str.split(/\s+/).map(w => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()).join(' ')
+  return str.split(/\s+/).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ')
 }

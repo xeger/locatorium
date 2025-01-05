@@ -30,3 +30,11 @@ jobs:
       - run: npm install
       - run: npm exec playwright install --with-deps
       - run: npm run test-e2e
+
+  type-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm install
+      - run: npm run type-check
