@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
@@ -21,4 +23,9 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
     },
   },
+  test: {
+    include: ['src/**/*.test.{ts,tsx}'],
+    globals: true,
+    setupFiles: ['./vitest-setup.ts', 'vitest-browser-react'],
+  }
 });
