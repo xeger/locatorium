@@ -22,7 +22,6 @@ describe('via Locator', () => {
     const target = page.getByTestId('right-click-target');
     await expect.element(target).toBeInTheDocument();
     await expect.element(page.getByRole('menu')).not.toBeInTheDocument();
-    // BUG: passes w/ Playwright; but unexpectedly fails w/ WebdriverIO (and it's impossible to right click in w/ Preview?!)
     await target.click({ button: 'right' });
     await expect.element(page.getByRole('menu')).toBeInTheDocument();
   })
@@ -47,7 +46,6 @@ describe('via userEvent', () => {
     const target = page.getByTestId('right-click-target');
     await expect.element(target).toBeInTheDocument();
     await expect.element(page.getByRole('menu')).not.toBeInTheDocument();
-    // BUG: passes w/ Playwright; but unexpectedly fails w/ WebdriverIO (and it's impossible to right click in w/ Preview?!)
     await userEvent.click(target, { button: 'right' });
     await expect.element(page.getByRole('menu')).toBeInTheDocument();
   })
