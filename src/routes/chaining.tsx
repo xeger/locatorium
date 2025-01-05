@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useState } from 'react';
 
 export function ChainingPage() {
@@ -16,44 +16,38 @@ export function ChainingPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Unchained</CardTitle>
+          <CardTitle>Root Locators</CardTitle>
+          <CardDescription>Returned from methods of the page object</CardDescription>
         </CardHeader>
         <CardContent>
-          The page object contains methods for creationg "root" locators: `getByRole`, `getByTestId`, etc.
-          As you would expect, root locators search the entire page for matching elements.
-          <Button onClick={chooseLast} disabled>Find Me</Button>
-          <Button onClick={chooseLast} aria-label="unchained button" data-testid="unchained-button">Alpha</Button>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Chained</CardTitle>
-        </CardHeader>
-        <CardContent>
-          The locator class also contains methods for deriving new, "chained" locators from an existing instance.
-          Chained locators typically search within the HTML element(s) matched by the parent locator.
-          <div aria-label="chained parent 1" data-testid="chained-parent-1" className="border border-black border-dashed">
-            Parent 1
-            <Button onClick={chooseLast} aria-label="chained child 1" data-testid="chained-child-1">Bravo</Button>
-          </div>
-          <div aria-label="chained parent 2" data-testid="chained-parent-2" className="border border-black border-dashed">
-            Parent 2
-            <Button onClick={chooseLast} aria-label="chained child 2" data-testid="chained-child-2">Charlie</Button>
+          <div className="flex flex-col gap-4">
+            <Button onClick={chooseLast} disabled>Zulu</Button>
+            <Button onClick={chooseLast} aria-label="Able" data-testid="alligator">Alpha</Button>
           </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Logically Combined</CardTitle>
+          <CardTitle>Chained Locators</CardTitle>
+          <CardDescription>Returned from locator instance methods</CardDescription>
         </CardHeader>
         <CardContent>
-          The locator class also contains methods for performing logical combinations of locators.
-          Instead of searchin "within" a parent, they return a new locator that matches the parent and/or
-          the child.
-          Intersection via `and` lets you find a single element by unrelated criteria e.g. "role X _and_ testid Y."
-          Union via `or` lets you find find many elements by unrelated criteria e.g. "label Q _or_ text Q."
+          <div aria-label="parent 1" data-testid="parent-1" className="border border-primary border-dashed flex flex-col p-4">
+            <Button onClick={chooseLast} aria-label="child 1" data-testid="child-1">Bravo</Button>
+          </div>
+          <div aria-label="parent 2" data-testid="parent-2" className="border border-primary border-dashed flex flex-col p-4">
+            <Button onClick={chooseLast} aria-label="child 2" data-testid="child-2">Charlie</Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Logical Combination Locators</CardTitle>
+        </CardHeader>
+        <CardContent>
+          To do!
         </CardContent>
       </Card>
     </div>

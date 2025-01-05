@@ -9,8 +9,10 @@ export function CombinationPage() {
           <CardTitle>Intersection</CardTitle>
         </CardHeader>
         <CardContent>
-          <Button id="one" data-testid="ambiguous-button">Alpha</Button>
-          <Button id="two" data-testid="ambiguous-button">Bravo</Button>
+          <div className="flex flex-col gap-4">
+            <Button id="one" data-testid="ambiguous-button">Alpha</Button>
+            <Button id="two" data-testid="ambiguous-button">Bravo</Button>
+          </div>
         </CardContent>
       </Card>
 
@@ -19,8 +21,10 @@ export function CombinationPage() {
           <CardTitle>Union</CardTitle>
         </CardHeader>
         <CardContent>
-          <Button id="three" data-testid="distinct-button-1">Charlie</Button>
-          <Button id="four" data-testid="distinct-button-2">Delta</Button>
+          <div className="flex flex-col gap-4">
+            <Button id="three" data-testid="distinct-button-1">Charlie</Button>
+            <Button id="four" data-testid="distinct-button-2">Delta</Button>
+          </div>
         </CardContent>
       </Card>
     </div>
