@@ -10,15 +10,17 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        provider: [playwright, preview, webdriverio]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
       - run: npm install
-      - run: npm exec playwright install --with-deps
-      # TODO: figure out how to use vitest (headed) preview mode in CI
-      # - run: npm run test
-      - run: npm run test:playwright
-      - run: npm run test:webdriverio
+      - if: matrix.provider == 'playwright'
+        run: npm exec playwright install --with-deps
+      - if: matrix.provider != 'preview'
+        run: npm run test:${{ matrix.provider }}
 
   test-e2e:
     runs-on: ubuntu-latest
