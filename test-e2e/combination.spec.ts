@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test';
-const {beforeEach, describe} = test;
+
+const { beforeEach } = test;
 
 beforeEach(async ({ page }) => {
   await page.goto('/combination');
