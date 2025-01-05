@@ -6,17 +6,17 @@ export function ChainingPage() {
       <h2>Unchained</h2>
 
       <button disabled>Find Me</button>
-      <button aria-label="unchained button" data-testid="unchained-button">Click Me</button>
+      <button aria-label="unchained button" data-testid="unchained-button">Alpha</button>
 
       <h2>Chained</h2>
 
       <div aria-label="chained parent 1" data-testid="chained-parent-1" className="border border-black border-dashed">
         <h3>Parent 1</h3>
-        <button aria-label="chained child 1" data-testid="chained-child-1">Click Me Too</button>
+        <button aria-label="chained child 1" data-testid="chained-child-1">Bravo</button>
       </div>
       <div aria-label="chained parent 2" data-testid="chained-parent-2" className="border border-black border-dashed">
         <h3>Parent 2</h3>
-        <button aria-label="chained child 2" data-testid="chained-child-2">Click Me Three</button>
+        <button aria-label="chained child 2" data-testid="chained-child-2">Charlie</button>
       </div>
     </div>
   )

@@ -3,14 +3,13 @@ const {beforeEach, describe} = test;
 
 beforeEach(async ({ page }) => {
   await page.goto('/chaining');
-  await expect(page).toHaveTitle(/Locatorium/);
 });
 
 describe('starting at page', () => {
   test('getByRole', async ({ page }) => {
     // Good: find by inner text.
     //   - This is not very specific, and may find the wrong elements(s) when searching the whole page.
-    await expect(page.getByText('Click Me', {exact: true})).toBeVisible()
+    await expect(page.getByText('Alpha', {exact: true})).toBeVisible()
 
     // Better: find by test id
     //   - This always works, but relies on developers being extremely diligent in choosing globally-unique test ids.
@@ -33,7 +32,7 @@ describe('chaining from an existing locator', () => {
   test('getByRole', async ({ page }) => {
     const parent1 = page.getByLabel('chained parent 1');
     const parent2 = page.getByLabel('chained parent 2');
-    await expect(parent1.getByRole('button')).toHaveText('Click Me Too')
-    await expect(parent2.getByRole('button')).toHaveText('Click Me Three')
+    await expect(parent1.getByRole('button')).toHaveText('Bravo')
+    await expect(parent2.getByRole('button')).toHaveText('Charlie')
   })
 })

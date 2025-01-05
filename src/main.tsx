@@ -6,6 +6,7 @@ import './index.css'
 import { HomePage } from './routes'
 import { Root } from './routes/__root'
 import { ChainingPage } from './routes/chaining'
+import { CombinationPage } from './routes/combination'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: 'chaining',
         element: <ChainingPage />,
+      },
+      {
+        path: 'combination',
+        element: <CombinationPage />,
       },
     ],
   },
