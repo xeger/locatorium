@@ -5,6 +5,7 @@ import { HomePage } from './routes'
 import { Root } from './routes/__root'
 import { ChainingPage } from './routes/chaining'
 import { CombinationPage } from './routes/combination'
+import { InteractivityPage } from './routes/interactivity'
 
 export const ROUTES = [
   {
@@ -14,6 +15,10 @@ export const ROUTES = [
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: 'interactivity',
+        element: <InteractivityPage />,
       },
       {
         path: 'chaining',
